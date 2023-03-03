@@ -1,0 +1,6 @@
+<div class="pokemons-container">
+  <div class="pokemon-card" *ngFor="let pokemon of pokemons">
+    <h3>{{ pokemon.name }}</h3>
+    <td><a class="w3-button w3-blue" routerLink="{{getPokemonId(pokemon.url)}}">Szczegóły</a></td>
+  </div>
+</div>
