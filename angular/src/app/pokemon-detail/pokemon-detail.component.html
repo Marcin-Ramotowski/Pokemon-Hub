@@ -1,5 +1,6 @@
 <div class="pokemon-detail-container">
   <div class="pokemon-details">
+    <img [src]="getImgUrl(pokemon.id)" alt="Obrazek">
     <h2>{{ pokemon.name }}</h2>
     <p>Bazowe doświadczenie: {{ pokemon.base_experience }}</p>
     <p>Wysokość: {{ pokemon.height }}</p>
