@@ -25,9 +25,13 @@ export class PokemonsComponent {
       .catch(error => console.error(error));
   }
 
-  getPokemonId(url: string): string {
-    const lastIndex = url.slice(0, -1).lastIndexOf('/')
-    const id = Number(url.slice(lastIndex+1,-1));
+  getPokemonUrl(url: string): string {
+    const id = url.match(/\/(\d+)\/$/)?.[1];
     return `/detail/${id}`
+  }
+
+  getImgUrl(url: string): string {
+    const id = url.match(/\/(\d+)\/$/)?.[1];
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
   }
 }
